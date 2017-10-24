@@ -1,6 +1,6 @@
 module.exports = function hashString(str, callback) {
   var bcrypt = require('bcrypt');
-  const saltRounds = 10;
+  const saltRounds = 13;
   const myPlaintextPassword = str;
 
   var salt = bcrypt.genSaltSync(saltRounds);
