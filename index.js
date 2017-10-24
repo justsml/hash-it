@@ -1,6 +1,10 @@
 module.exports = function hashString(str, callback) {
-  // Add hashing function here
-  // pass result using node standard pattern:
-  // callback(error, result) // where result is the hash
-  callback(null, str)
+  var bcrypt = require('bcrypt');
+  const saltRounds = 13;
+  const myPlaintextPassword = str;
+
+  var salt = bcrypt.genSaltSync(saltRounds);
+  var hash = bcrypt.hashSync(myPlaintextPassword, salt);
+
+  callback(null, hash)
 }
