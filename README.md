@@ -1,6 +1,7 @@
 # Hash it
 
-Get going:
+
+### Get going:
 
 ```
 npm install
